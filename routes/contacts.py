@@ -9,3 +9,15 @@ def home():
 @contacts.route('/new')
 def add_contact():
     return "Saving a contact"
+
+@contacts.route('/update')
+def update():
+    return "Updating a contact"
+
+@contacts.route('/delete')
+def delete():
+    return "Deleting a contact"
+
+@contacts.route('/about')
+def about():
+    return render_template('about.html')
