@@ -1,6 +1,10 @@
 from flask import Blueprint, render_template
 
+#Guardando las rutas en un blueprint
 contacts = Blueprint('contacts', __name__)
+
+
+#Creación de cada ruta:
 
 @contacts.route('/')
 def home():
