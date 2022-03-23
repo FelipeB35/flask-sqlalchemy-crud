@@ -1,12 +1,11 @@
-import email
 from utils.db import db
 
 #Creando modelo de contacts, se extrae cada columna de la db con su respectivo tipo de dato
-class Contacts(db.Model):
-    id = db.Column(db.Integer, primary_hey = True)
-    fullname = db.column(db.String(100))
-    email = db.column(db.String(100))
-    phone = db.column(db.String(100))
+class Contact(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    fullname = db.Column(db.String(100))
+    email = db.Column(db.String(100))
+    phone = db.Column(db.String(100))
     
     #Permite que cada vez que se ejecute se guarde cada valor de la consulta
     def __init__(self, fullname, email, phone):
